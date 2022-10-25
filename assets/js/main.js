@@ -4,13 +4,36 @@
 // controlla che sia già presente nella lista di email per controllare se può accedere,
 // stampa un messaggio appropriato sull’esito del controllo.
 
-let MailList = ["js@boolean.com", "css@boolean.com", "html@boolean.com"];
-console.log(MailList)
+let inputEmail = document.getElementById('inputEmail');
+let emails = ['html@boolean.it', 'css@boolean.it', 'js@boolean.it'];
 
-function verificaEmail () {
-    let Mail = document.getElementById('inputEmail').value;
+let emailPresent = false;
+
+
+function verificaEmail(){
+
+    let valueEmail = inputEmail.value;
     
+    for (let i=0; i < emails.length; i++) {
+
+        let thisEmail = emails[i];
+        
+    if (valueEmail = thisEmail) {
+
+        emailPresent = true;
+
+    } else{
+        document.getElementById('text').innerText = 'error';
+    }
+
+    }
+
 }
+
+
+
+
+
 
 
 
