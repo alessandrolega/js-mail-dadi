@@ -15,38 +15,36 @@
 
 // MAIL SVOLGIMENTO
 
-// let inputEmail = document.getElementById('inputEmail');
-// let emails = ['html@boolean.it', 'css@boolean.it', 'js@boolean.it'];
-
-// let emailPresent = true;
+let inputEmail = document.getElementById('inputEmail');
+let emails = ['html@boolean.it', 'css@boolean.it', 'js@boolean.it'];
 
 
-// function verificaEmail(){
 
-//     let valueEmail = inputEmail.value;
-    
-//     for (let i=0; i < emails.length; i++) {
-//     if (valueEmail = emails[i]) {
-//         document.getElementById('text').innerText = 'success';
+function verificaEmail() {
+    let emailPresent = false;
+    let valueEmail = inputEmail.value;
 
-//         emailPresent = true;
+    for (let i = 0; i < emails.length; i++) {
+        if (valueEmail == emails[i]) {
+            emailPresent = true;
+        }
+    }
 
-//     } else{
-//         document.getElementById('text').innerText = 'error';
 
-//         emailPresent = false;
-//     }
-
-//     }
-
-// }
+    // controllo emailPresent
+    if (emailPresent == true) {
+        document.getElementById('text').innerText = 'success';
+    } else {
+        document.getElementById('text').innerText = 'error';
+    }
+}
 
 
 
 // DADI SVOLGIMENTO
 
-let player = Math.round(Math.random() *6) +1;
-let computer = Math.round(Math.random() *6) +1;
+// let player = Math.round(Math.random() *6) +1;
+// let computer = Math.round(Math.random() *6) +1;
 
 
 
