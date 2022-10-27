@@ -43,21 +43,34 @@
 
 //DADI SVOLGIMENTO
 
-let player = Math.round(Math.random() *6) +1;
-let computer = Math.round(Math.random() *6) +1;
 
-document.getElementById('numGiocatore').innerText = ` Player's number is: ${player}`;
-document.getElementById('numCpu').innerText = ` Computer's number is: ${computer}`;
+let playerWins = [];
+let computerWins = [];
 
-if (player > computer) {
+
+
+
+function Play () {
+    let player = Math.round(Math.random() *6) +1;
+    let computer = Math.round(Math.random() *6) +1;
+    document.getElementById('numGiocatore').innerText = ` Player's number is: ${player}`;
+    document.getElementById('numCpu').innerText = ` Computer's number is: ${computer}`;
+
+    if (player > computer) {
     document.getElementById('result').innerText = `The winner is: Player`;
+    playerWins.push('won');
 
-} else if (computer > player) {
+    } else if (computer > player) {
     document.getElementById('result').innerText = `The winner is: Computer`;
+    computerWins.push('won');
 
 
-} else{
+    } else{
     document.getElementById('result').innerText = `Tie`;
+    }
+
+    document.getElementById('numWins').innerText = `${playerWins.length}`;
+    document.getElementById('numwinsPc').innerText = `: ${computerWins.length}`;
 }
 
 
