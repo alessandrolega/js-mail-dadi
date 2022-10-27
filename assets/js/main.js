@@ -15,36 +15,52 @@
 
 // MAIL SVOLGIMENTO
 
-let inputEmail = document.getElementById('inputEmail');
-let emails = ['html@boolean.it', 'css@boolean.it', 'js@boolean.it'];
+// let inputEmail = document.getElementById('inputEmail');
+// let emails = ['html@boolean.it', 'css@boolean.it', 'js@boolean.it'];
 
 
 
-function verificaEmail() {
-    let emailPresent = false;
-    let valueEmail = inputEmail.value;
+// function verificaEmail() {
+//     let emailPresent = false;
+//     let valueEmail = inputEmail.value;
 
-    for (let i = 0; i < emails.length; i++) {
-        if (valueEmail == emails[i]) {
-            emailPresent = true;
-        }
-    }
+//     for (let i = 0; i < emails.length; i++) {
+//         if (valueEmail == emails[i]) {
+//             emailPresent = true;
+//         }
+//     }
 
 
-    // controllo emailPresent
-    if (emailPresent == true) {
-        document.getElementById('text').innerText = 'success';
-    } else {
-        document.getElementById('text').innerText = 'error';
-    }
+//     // controllo emailPresent
+//     if (emailPresent == true) {
+//         document.getElementById('text').innerText = 'success';
+//     } else {
+//         document.getElementById('text').innerText = 'error';
+//     }
+// }
+
+
+
+//DADI SVOLGIMENTO
+
+let player = Math.round(Math.random() *6) +1;
+let computer = Math.round(Math.random() *6) +1;
+
+document.getElementById('numGiocatore').innerText = ` Player's number is: ${player}`;
+document.getElementById('numCpu').innerText = ` Computer's number is: ${computer}`;
+
+if (player > computer) {
+    document.getElementById('result').innerText = `The winner is: Player`;
+
+} else if (computer > player) {
+    document.getElementById('result').innerText = `The winner is: Computer`;
+
+
+} else{
+    document.getElementById('result').innerText = `Tie`;
 }
 
 
-
-// DADI SVOLGIMENTO
-
-// let player = Math.round(Math.random() *6) +1;
-// let computer = Math.round(Math.random() *6) +1;
 
 
 
